@@ -16,5 +16,15 @@ Notes:
 
 
 def add_indexes(numbers):
-    # Your code here
+    # Create a new empty list
+    new_values = []
+    # Loop over the input list of numbers, using Enumerate because it returns an index value
+    for i, val in enumerate(numbers):
+        new_values.append(i + val)
+    # return the newly created list
+    return new_values
+
+print(add_indexes([0, 0, 0, 0, 0]))
+print(add_indexes([1, 2, 3, 4, 5]))
+print(add_indexes([5, 4, 3, 2, 1]))
 

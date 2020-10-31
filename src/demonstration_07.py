@@ -13,5 +13,16 @@ Examples:
 - repeat_it("cwAt") -> "C-Ww-Aaa-Tttt"
 """
 def repeat_it(input_str):
-    # Your code here
+    # Create empty list placeholder
+    string_list = []
+    # Iterate over the string using enumerate to gain access to index
+    for index, value in enumerate(input_str, 1):
+        # Append the current value multiplied by the index number and capitalized to string_list
+        string_list.append(str.capitalize(value * index))
+        
+    # Join string_list back in to a string using '-' as a seperator
+    return '-'.join(string_list)
 
+print(repeat_it('abcd'))
+print(repeat_it("RqaEzty"))
+print(repeat_it("cwAt"))

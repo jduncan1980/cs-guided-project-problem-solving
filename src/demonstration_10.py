@@ -16,6 +16,17 @@ Notes:
 the maximum number is first.
 """
 def max_and_min(input_str):
-    # Your code here
+    # Convert string to a list of ints
+    int_list = [int(num) for num in input_str.split(' ')]
+    # Get largest digit by calling max() on int_list
+    high = max(int_list)
+    # Get smallest digit by calling min() on int_list
+    low = min(int_list)
+    # Convert highest and lowest to string
+    string_result = "%d %d" % (high, low)
+    # Return string to caller
+    return string_result
 
-
+print(max_and_min("1 2 3 4 5"))
+print(max_and_min("1 2 -3 4 5"))
+print(max_and_min("1 9 3 4 -5"))

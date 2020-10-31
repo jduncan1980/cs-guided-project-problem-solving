@@ -10,6 +10,14 @@ Examples:
 - parity(2) -> "Even"
 """
 def parity(input_int):
-    # Your code here
+    # If integer mod 2 is 0, number is even
+    if input_int % 2 == 0:
+        return "Even"
+    # Else, number is odd
+    else:
+        return "Odd"
 
+print(parity(1))
+print(parity(10))
+print(parity(340))
 

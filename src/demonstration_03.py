@@ -12,8 +12,13 @@ Examples:
 Notes:
 - Bonus: Try to complete this challenge in one line!
 """
-
+from math import prod
 
 def multiply_nums(nums):
-    # Your code here
+    # Return the product of mapping over the list created by splitting nums at ','s and converting to ints
+    return prod(map(int, nums.split(',')))
 
+print(multiply_nums("2, 3"))
+print(multiply_nums("1, 2, 3, 4"))
+print(multiply_nums("54, 75, 453, 0"))
+print(multiply_nums("10, -2"))
